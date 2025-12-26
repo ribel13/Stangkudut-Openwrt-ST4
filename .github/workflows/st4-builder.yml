@@ -10,7 +10,7 @@ on:
         default: 'master'
         options:
           - master
-          - openwrt-24.10
+          - openwrt-24.10.5
           - openwrt-23.05
           - openwrt-22.03
 
