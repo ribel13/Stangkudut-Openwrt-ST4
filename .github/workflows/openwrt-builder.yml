@@ -17,7 +17,7 @@ on:
   workflow_dispatch:
 
 env:
-  REPO_URL: https://downloads.openwrt.org
+  REPO_URL: https://openwrt.org/git
   REPO_BRANCH: 25.12.0
   FEEDS_CONF: feeds.conf.default
   CONFIG_FILE: .config
