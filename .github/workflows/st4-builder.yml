@@ -7,10 +7,10 @@ on:
         description: 'Pilih Versi OpenWrt'
         required: true
         type: choice
-        default: 'openwrt-25.12.0-rc4'
+        default: 'openwrt-25.12.0-rc5'
         options:
           - master
-          - openwrt-25.12.0-rc4
+          - openwrt-25.12.0-rc5
           - openwrt-23.05
           - openwrt-22.03
 
@@ -45,7 +45,8 @@ jobs:
 
     - name: Clone OpenWrt source code
       env:
-        REPO_URL: https://github.com/openwrt/openwrt
+        #REPO_URL: https://github.com/openwrt/openwrt
+        REPO_URL: https://github.com/openwrt/openwrt.git
         REPO_BRANCH: ${{ github.event.inputs.openwrt_version }}
       run: |
         git clone --depth 1 -b $REPO_BRANCH $REPO_URL openwrt
